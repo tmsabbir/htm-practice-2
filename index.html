@@ -90,6 +90,17 @@
 			</div>
 		</form>
 		
+		<img src="image/image.jpg" id="showImage" height="300" />
+		
+		<script>
+			const image = document.getElementById('photo')
+			const showImage = document.getElementById('showImage')
+			image.addEventListener('change',function(e){
+				const url = URL.createObjectURL(e.target.files[0])
+				showImage.src = url;
+			})
+		</script>
+		
 		
 	</body>
 </html>
